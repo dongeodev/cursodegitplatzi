@@ -47,13 +47,62 @@
     <div class="item">
         <H1>git tag (Etiquetando confirmaciones)</H1>
         <h5>clase 15</h5>
-        <p><strong>git tag -a -m"":</strong> Nos permite agregar etiquetas a nuestros cambios. para agregar tag a otro commit se usa el hash</p>
+        <p><strong>git tag -a -m"":</strong> Nos permite agregar etiquetas a nuestros cambios. para agregar tag a otro commit se usa el SHA1</p>
         <p><strong>git tag -l:</strong> Nos muestra la lista de etiquetas.</p>
-        <p><strong>git tag -f [hash]:</strong> Para renombrar. Se coloca el hash</p>
+        <p><strong>git tag -f [SHA1]:</strong> Para renombrar. Se coloca el SHA1</p>
         <p><strong>git tag -d :</strong> Para borar.</p>
-        <p><strong>Git commit -m [“mensaje”] -amend :</strong> agregar nuevos cambios al ultimo commit</p>
-        <p><strong>git log : </strong> Nos muestra la historia de todos los commits que hemos realizados.</p>
     </div>
+    <div class="item">
+        <H1>git log (Revisando la historia de nuestro proyecto)</H1>
+        <h5>clase 16</h5>
+        <p><strong>git log :</strong> Muestra el historial de commit con fecha y autor</p>
+        <p><strong>git log --oneline :</strong> Muestra un resumen de los commit</p>
+        <p><strong>git log --oneline --graph :</strong> Muestra la grafica de commit con sus ramas</p>
+        <p><strong>git log -# :</strong> Muestra el numero especifico de commit que quieres ver</p>
+    </div>
+    <div class="item">
+        <H1>git diff (Revisando los cambios entre versiones)</H1>
+        <h5>clase 17</h5>
+        <p><strong>git diff [SHA1V1] [SHA1V2]:</strong> Muestra la diferencia entre commit</p>
+        <p><strong>git diff [tagV1] [tagV2]:</strong> tambien se pueden usar los tags</p>
+    </div>
+    <div class="item">
+        <H1>git reset -- soft</H1>
+        <h5>clase 18</h5>
+        <p><strong>git reset --soft [SHA1]:</strong> Desde que version borramos los commit</p>
+        <p><strong>Nota:</strong> Hay que tener en cuenta que si usas git reset --soft
+        Tienes 10 commits y borras el numero 7, los commits 8, 9 y 10 también se borran,
+        y tendras un nuevo commit que tomara el numero 8.</p>
+    </div>
+    <div class="item">
+        <H1>git reset -- mixed</H1>
+        <h5>clase 19</h5>
+        <p><strong>git reset --mixed [SHA1]:</strong> Elimina los cambios, también del staging area.</p>
+        <p><strong>Nota:</strong> La diferencia con git reset --soft es que esta deja los cambio en staging</p>
+    </div>
+    <div class="item">
+        <H1>git reset --hard</H1>
+        <h5>clase 20</h5>
+        <p><strong>git reset --hard [SHA1]:</strong> Elimina los cambios por completo.</p>
+        
+    </div>
+    <div class="item">
+        <H1>git branch (Múltiples variantes del repositorio)</H1>
+        <h5>clase 22</h5>
+        <p><strong>git branch [nombre]:</strong> crea una rama </p>
+        <p><strong>git branch -d-/D [nombre]</strong> elimina una rama </p>
+        <p><strong>git branch -m [nombre] [nombre nuevo]</strong> Renombrar </p>
+        <p><strong>git branch -l</strong> Lista de ramas</p>
+        
+    </div>
+    <div class="item">
+        <H1>git branch (Múltiples variantes del repositorio)</H1>
+        <h5>clase 23</h5>
+        <p><strong>git checkout [nombre/sha1]:</strong>  Nos permite movernos entre ramas o commits, sirve para debugging </p>
+        <p><strong>git checkout -b [nombre_rama]: </strong> Crea una rama si se cambia a esa rama sin necesidad de usar git branch</p>
+                
+    </div>
+
     <div class="item">clase #4</div>
     <div class="item">clase #5</div>
     <div class="item">clase #6</div>
