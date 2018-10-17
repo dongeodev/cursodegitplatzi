@@ -1,8 +1,8 @@
 # Descripcion 
 
 Que estas agregando?
-- [] Html
-- [] Css
-- [] Js
+- [ ] Html
+- [ ] Css
+- [ ] Js
 
 Tienes algun comentario sobre tu mejora?
