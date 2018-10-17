@@ -6,3 +6,5 @@ Que estas agregando?
 - [ ] Js
 
 Tienes algun comentario sobre tu mejora?
+
+Donde puedo ver los cambios?
