@@ -1,2 +1,2 @@
 # Curso de github
-Apuntes del curso profesional de git y github de plati Platzi
+Apuntes del curso profesional de git y github de Platzi
