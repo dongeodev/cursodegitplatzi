@@ -1,6 +1,6 @@
 # Curso de github
 Apuntes del curso profesional de git y github de Platzi
-
+https://geodu07.github.io/cursodegitplatzi/
 Esta es una iniciativa para que podamos poner en practica lo que vamos aprendiendo en el curso profesional de git y github de platzi. He dejado algo muy basico para dar espacio a que mas personas hagan sus aportes y asi poder practicar.
 
 ### Sugerencias:
