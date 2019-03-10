@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Curso Git</title>
 </head>
 <body>
-    <header>
-        <h1>Guía del curso <strong>profesional</strong> de <strong>git y gitHub</strong> en Platzi</h1><figure><img src="img/logo-banner.png" alt=""></figure>
+    <header class="header">
+        <div class="header-container">
+            <h1>Guía del </br>
+                <strong>curso profesional</strong></br>
+                de <strong>git y gitHub</strong></br>
+                en Platzi
+            </h1>
+            <img class="header-img" src="img/logo-banner.png" alt="logo GitHub">
+        </div>
     </header>
+
+    <section class="main">
         <div class="item command">
             <h2>Comandos utiles de la terminal</h2>
             <h5>clase 11</h5>
-            <p><strong> cd :</strong> :\ Moverse entre carpetas</p>
-            <p><strong>mkdir :</strong>  crear carpetas</p>
+            <p><strong> cd :</strong> Moverse entre carpetas</p>
+            <p><strong>mkdir :</strong> crear carpetas</p>
             <p><strong>ls :</strong> lista de archivos en una carpeta</p>
-            <p><strong>touch :</strong> : Crear un archivo</p>
+            <p><strong>touch :</strong> Crear un archivo</p>
             <p><strong>rm [Nombre-archivo] :</strong> Borra el archivo</p>
             <p><strong>rm -rf [Nombre-carpeta] :</strong> Borra carpeta</p>
             <p><strong>clear :</strong> limpia la terminal</p>
-
         </div>
+    
         <div class="item git">
             <h2>Creando Repositorios</h2>
             <h5>clase 12</h5>
-            <p> <strong>git init :</strong>  nos crea un repositorio de manera local y lo hará en la carpeta donde estamos posicionados o se le puede pasar [nombre_de_la_carpeta] y creará la carpeta con ese nombre.</p>
-            <p>Los repositorios se crean como carpetas oculas, para eliminarlos puedes usar el explorardor de archivos o rm-rf [nombre del repo]</p>
-            
+            <p> <strong>git init :</strong> nos crea un repositorio de manera local y lo hará en la carpeta donde estamos posicionados.</p>
+            <p> <strong>git init [nombre_de_la_carpeta] :</strong> crea la carpeta con ese nombre y dentro crea el repositorio.</p> 
         </div>
+    
         <div class="item git">
             <h2>git add | rm | status (Agregando, quitando y viendo el estatus de archivos)</h2>
             <h5>clase 13</h5>
@@ -41,6 +50,7 @@
             <p><strong>git rm -f [file] :</strong>Elimina el archivo por completo.</p>
             <p><strong>git add -n [file] : </strong>Que no haga nada</p>
         </div>
+    
         <div class="item git">
             <h2>git commit (Confirmando cambios)</h2>
             <h5>clase 14</h5>
@@ -48,6 +58,7 @@
             <p><strong>Git commit -m [“mensaje”] -amend :</strong> agregar nuevos cambios al ultimo commit</p>
             <p><strong>git log : </strong> Nos muestra la historia de todos los commits que hemos realizados.</p>
         </div>
+    
         <div class="item git">
             <h2>git tag (Etiquetando confirmaciones)</h2>
             <h5>clase 15</h5>
@@ -56,6 +67,7 @@
             <p><strong>git tag -f [SHA1]:</strong> Para renombrar. Se coloca el SHA1</p>
             <p><strong>git tag -d :</strong> Para borar.</p>
         </div>
+    
         <div class="item git">
             <h2>git log (Revisando la historia de nuestro proyecto)</h2>
             <h5>clase 16</h5>
@@ -64,12 +76,14 @@
             <p><strong>git log --oneline --graph :</strong> Muestra la grafica de commit con sus ramas</p>
             <p><strong>git log -# :</strong> Muestra el numero especifico de commit que quieres ver</p>
         </div>
+    
         <div class="item git">
             <h2>git diff (Revisando los cambios entre versiones)</h2>
             <h5>clase 17</h5>
             <p><strong>git diff [SHA1V1] [SHA1V2]:</strong> Muestra la diferencia entre commit</p>
             <p><strong>git diff [tagV1] [tagV2]:</strong> tambien se pueden usar los tags</p>
         </div>
+    
         <div class="item git">
             <h2>git reset -- soft</h2>
             <h5>clase 18</h5>
@@ -78,18 +92,20 @@
             Tienes 10 commits y borras el numero 7, los commits 8, 9 y 10 también se borran,
             y tendras un nuevo commit que tomara el numero 8.</p>
         </div>
+    
         <div class="item git">
             <h2>git reset -- mixed</h2>
             <h5>clase 19</h5>
             <p><strong>git reset --mixed [SHA1]:</strong> Elimina los cambios, también del staging area.</p>
             <p><strong>Nota:</strong> La diferencia con git reset --soft es que esta deja los cambio en staging</p>
         </div>
+    
         <div class="item git">
             <h2>git reset --hard</h2>
             <h5>clase 20</h5>
-            <p><strong>git reset --hard [SHA1]:</strong> Elimina los cambios por completo.</p>
-            
+            <p><strong>git reset --hard [SHA1]:</strong> Elimina los cambios por completo.</p>      
         </div>
+    
         <div class="item git">
             <h2>git branch (Múltiples variantes del repositorio)</h2>
             <h5>clase 22</h5>
@@ -97,27 +113,28 @@
             <p><strong>git branch -d-/D [nombre]</strong> elimina una rama </p>
             <p><strong>git branch -m [nombre] [nombre nuevo]</strong> Renombrar </p>
             <p><strong>git branch -l</strong> Lista de ramas</p>
-            
         </div>
+    
         <div class="item git">
             <h2>git branch (Múltiples variantes del repositorio)</h2>
             <h5>clase 23</h5>
             <p><strong>git checkout [nombre/sha1]:</strong>  Nos permite movernos entre ramas o commits, sirve para debugging </p>
             <p><strong>git checkout -b [nombre_rama]: </strong> Crea una rama si se cambia a esa rama sin necesidad de usar git branch</p>
-                    
         </div>
+    
         <div class="item git">
             <h2>git merge (Mezclando ramas y resolviendo conflictos)</h2>
             <h5>clase 25</h5>
-            <p><strong>git merge [nombre_rama]:</strong>  mezcla la rama actual con la rama deseada </p>
-                        
+            <p><strong>git merge [nombre_rama]:</strong>  mezcla la rama actual con la rama deseada </p>               
         </div>
+    
         <div class="item git">
             <h2>git rebase (Reescribe la historia de tu proyecto)</h2>
             <h5>clase 26</h5>
             <p><strong>git rebase [nombre_rama]:</strong>  Hace la mezcla de acuerdo al orden cronologico que se fueron creando </p>
             <p>se recomiendo no usar esto cuando se esta trabajando en equipo. Usarlo solo de manera local</p>              
         </div>
+    
         <div class="item git">
             <h2>git stash (Guardando cambios temporalmente)</h2>
             <h5>clase 27</h5>
@@ -127,18 +144,20 @@
             <p><strong>git stash apply : </strong> Aplicamos el último cambio</p>
             <p>se recomiendo no usar esto cuando se esta trabajando en equipo. Usarlo solo de manera local</p>              
         </div>
+    
         <div class="item git">
             <h2>Cherry pick eligiendo commits selectivamente</h2>
             <h5>clase 28</h5>
             <p><strong>git cherry-pick [SHA1] :</strong> Mueves un commit a una rama que desees</p>
             <p>Cuando por algun motivo realizas un commit en una rama que no querias o lo quieres mover a otra rama.</p>              
         </div>
+    
         <div class="item git">
             <h2>Cherry pick eligiendo commits selectivamente</h2>
             <h5>clase 30</h5>
-            <p><strong>git clone [https/ssh]:</strong> Para clonar un repositorio en la pc. </p>
-                        
+            <p><strong>git clone [https/ssh]:</strong> Para clonar un repositorio en la pc. </p>               
         </div>
+    
         <div class="item github">
             <h2>Añadiendo una llave ssh a GitHub</h2>
             <h5>clase 32</h5>
@@ -146,14 +165,15 @@
             <p><strong>cat ~/.ssh/id_rsa.pub</strong> Copiar la llave </p>
             <p>Vas a tu perfil en github y copias la llave</p>              
         </div>
+    
         <div class="item git">
             <h2>git remote (Añadiendo un repositorio remoto a uno local)</h2>
             <h5>clase 33</h5>
             <p><strong>git remote add [origin] [SSH/HTTPS] </strong> Conecta un repositorio con nuestro equipo local. </p>
             <p><strong>git remote -v </strong> Lista las conexiones existentes.</p>
-            <p><strong>git remote remove [origin]  </strong> Elimina una conexión con algún repositorio.</p>
-                        
+            <p><strong>git remote remove [origin]  </strong> Elimina una conexión con algún repositorio.</p>               
         </div>
+    
         <div class="item github">
             <h2>git pull/fetch (Trayendo cambios desde el repositorio remoto)</h2>
             <h5>clase 34</h5>
@@ -161,19 +181,25 @@
             <p><strong>git merge [rama] --allow-unrelated-histories</strong> trae los archivos del repo remoto </p>
             <p><strong>git pull [repo] [rama]</strong> Trae archivos del repo remoto y los mezcla con la rama que le indiquemos</p>                  
         </div>
+    
         <div class="item github">
             <h2>git push (Enviando cambios al repositorio remoto)</h2>
             <h5>clase 35</h5>
             <p><strong>git push [repo] [rama]</strong> Envia los archivos al repo remoto </p>
             <p><strong>git push [repo] --tags</strong> Envia los tags al repo remoto </p>
-        
         </div>
+    
         <div class="item github">
             <h2>.gitignore (Ignorando archivos no deseados)</h2>
             <h5>clase 40</h5>
             <p><strong>touch .gitignore</strong> Crea el archivo y agrega el nombre de archivo que no <p><strong>git push [repo] --tags</strong> Envia los tags al repo remoto </p>
         </div>
+    
+    </section>
 
+    <footer class="footer">
+        <p>Agradecimiento especial a <a href="https://platzi.com" target="_blank">Platzi</a> por mostrarnos el camino</p>
+    </footer>
 
 </body>
 </html>
