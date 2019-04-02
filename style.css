@@ -1,6 +1,16 @@
+:root {
+    --main-color: #3e75c3;
+    --text-color: #333;
+    --bg-color: #d7d7d7;
+    --bg-cards-color: #f0f0f0;
+    --main-font: 'Roboto' , sans-serif;
+}
+
 body{
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Roboto' , sans-serif; 
+    font-family: var(--main-font);
+    color: var(--text-color); 
 }
 .header{
     padding: 0 100px;
@@ -16,7 +26,7 @@ body{
     margin: 0;
 }
 .header h1 strong{
-    color: #3e75c3;
+    color: var(--main-color);
     font-size: 2em;
     text-transform: capitalize;
 }
@@ -33,13 +43,13 @@ h2{
     margin-bottom: 0;
 }
 h5{
-    color: #3e75c3;
+    color: var(--main-color);
     margin: 0 0 2em 0;
     font-weight: 300;
 }
 
 .footer {
-    background: #d7d7d7;
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +59,7 @@ h5{
     font-weight: bold;
 }
 .footer a {
-    color: #3e75c3;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -57,34 +67,29 @@ h5{
     position: relative;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--bg-cards-color);
     padding: 1em 3em;
     overflow: hidden;
 }
 
-.command::after{
-    content: url(img/terminal.svg);
+.command::after,
+.git::after,
+.github::after {
     position: absolute;
     right: 130px;
     top: 40%;
     transform: scale(8);
     opacity: 0.1;
+}
+
+.command::after{
+    content: url(img/terminal.svg);
 }
 
 .git::after{
     content: url(img/git.svg);
-    position: absolute;
-    right: 130px;
-    top: 40%;
-    transform: scale(8);
-    opacity: 0.1;
 }
 
 .github::after{
     content: url(img/github.svg);
-    position: absolute;
-    right: 130px;
-    top: 40%;
-    transform: scale(8);
-    opacity: 0.1;
 }
