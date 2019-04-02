@@ -1,19 +1,43 @@
 :root {
-    --main-color: #3e75c3;
-    --text-color: #333;
-    --bg-color: #d7d7d7;
+    --main-color:     #3e75c3;
+    --text-color:     #333;
+    --bg-color:       #d7d7d7;
     --bg-cards-color: #f0f0f0;
-    --main-font: 'Roboto' , sans-serif;
+    --main-font:       'Roboto' , sans-serif;
+    --padding-size:    0 100px;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--text-color); 
 }
 
 body{
-    box-sizing: border-box;
-    margin: 0;
+    background-color: var(--bg-color);
     font-family: var(--main-font);
-    color: var(--text-color); 
 }
+
+.menu{
+    display: flex;
+    padding: var(--padding-size);
+    background-color: var(--bg-color);
+}
+.title-theme{
+    border: 1px solid red;
+    display: inline-block;
+}
+.title-theme p{
+    color: var(--main-color);
+    font-weight: 700;
+}
+.theme{
+    border: 1px solid red;
+    display: inline-block;
+}
+
 .header{
-    padding: 0 100px;
+    padding: var(--padding-size);
     margin-bottom: 30px;
 }
 .header-container{
@@ -22,20 +46,20 @@ body{
     align-items: center;
     height: 300px;
 }
-.header h1{
-    margin: 0;
-}
 .header h1 strong{
     color: var(--main-color);
     font-size: 2em;
     text-transform: capitalize;
 }
-.header-img{
+.header-svg{
     height: 90%;
+}
+.svg-path{
+    fill: var(--main-color);
 }
 
 .main{
-    padding: 0 100px;
+    padding: var(--padding-size);
 }
 
 h2{
@@ -54,9 +78,8 @@ h5{
     justify-content: center;
     align-items: center;
     height: 100px;
-    margin: 0;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 700;
 }
 .footer a {
     color: var(--main-color);
@@ -77,8 +100,8 @@ h5{
 .github::after {
     position: absolute;
     right: 130px;
-    top: 40%;
-    transform: scale(8);
+    top: 50%;
+    transform: scale(7);
     opacity: 0.1;
 }
 
