@@ -1,9 +1,42 @@
-body{
-    margin: 0;
-    font-family: 'Roboto' , sans-serif; 
+:root {
+    --main-color:     #3e75c3;
+    --text-color:     #333;
+    --bg-color:       #d7d7d7;
+    --bg-cards-color: #f0f0f0;
+    --main-font:       'Roboto' , sans-serif;
+    --padding-size:    0 100px 50px;
 }
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--text-color); 
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--main-font);
+}
+
+.menu{
+    display: flex;
+    padding: var(--padding-size);
+    background-color: var(--bg-color);
+}
+.title-theme{
+    display: inline-block;
+}
+.title-theme p{
+    color: var(--main-color);
+    font-weight: 700;
+}
+.theme{
+    display: inline-block;
+    margin-left: 10px;
+}
+
 .header{
-    padding: 0 100px;
+    padding: var(--padding-size);
     margin-bottom: 30px;
 }
 .header-container{
@@ -12,20 +45,20 @@ body{
     align-items: center;
     min-height: 300px;
 }
-.header h1{
-    margin: 0;
-}
 .header h1 strong{
-    color: #3e75c3;
+    color: var(--main-color);
     font-size: 2em;
     text-transform: capitalize;
 }
-.header-img{
+.header-svg{
     height: 90%;
+}
+.svg-path{
+    fill: var(--main-color);
 }
 
 .main{
-    padding: 0 100px 50px;
+    padding: var(--padding-size);
 }
 
 h2{
@@ -33,23 +66,22 @@ h2{
     margin-bottom: 0;
 }
 h5{
-    color: #3e75c3;
+    color: var(--main-color);
     margin: 0 0 2em 0;
     font-weight: 300;
 }
 
 .footer {
-    background: #d7d7d7;
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    margin: 0;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 700;
 }
 .footer a {
-    color: #3e75c3;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -57,31 +89,32 @@ h5{
     position: relative;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--bg-cards-color);
     padding: 1em 3em;
     overflow: hidden;
 }
 
-.command::after{
-    content: url(img/terminal.svg);
+.command::after,
+.git::after,
+.github::after {
     position: absolute;
     right: 130px;
-    top: 40%;
-    transform: scale(8);
+    top: 50%;
+    transform: scale(7);
     opacity: 0.1;
+}
+
+.command::after{
+    content: url(img/terminal.svg);
 }
 
 .git::after{
     content: url(img/git.svg);
-    position: absolute;
-    right: 130px;
-    top: 40%;
-    transform: scale(8);
-    opacity: 0.1;
 }
 
 .github::after{
     content: url(img/github.svg);
+<<<<<<< HEAD
     position: absolute;
     right: 130px;
     top: 40%;
@@ -100,4 +133,6 @@ h5{
     .main{
         padding: 0 20px 30px;
     }
+=======
+>>>>>>> master
 }
