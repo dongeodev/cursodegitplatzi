@@ -1,10 +1,12 @@
 :root {
-    --main-color:     #3e75c3;
-    --text-color:     #333;
-    --bg-color:       #d7d7d7;
-    --bg-cards-color: #f0f0f0;
-    --main-font:       'Roboto' , sans-serif;
-    --padding-size:    0 100px 50px;
+    --main-color:         #3e75c3;
+    --text-color:         #333;
+    --bg-color:           #d7d7d7;
+    --bg-cards-color:     #f0f0f0;
+    --bg-cards-color-alt: #3e75c344;
+    --bg-footer-color:    #666;
+    --main-font:           'Roboto' , sans-serif;
+    --padding-size:        10px 100px;
 }
 
 *, *::after, *::before{
@@ -19,12 +21,15 @@ body{
 }
 
 .menu{
-    display: flex;
-    padding: var(--padding-size);
+    padding: 5px;
     background-color: var(--bg-color);
-}
-.title-theme{
-    display: inline-block;
+    border-bottom: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
 .title-theme p{
     color: var(--main-color);
@@ -32,12 +37,10 @@ body{
 }
 .theme{
     display: inline-block;
-    margin-left: 10px;
 }
 
 .header{
     padding: var(--padding-size);
-    margin-bottom: 30px;
 }
 .header-container{
     display: flex;
@@ -51,7 +54,7 @@ body{
     text-transform: capitalize;
 }
 .header-svg{
-    height: 90%;
+    max-height: 350px;
 }
 .svg-path{
     fill: var(--main-color);
@@ -63,22 +66,26 @@ body{
 
 h2{
     font-size: 1.5em;
-    margin-bottom: 0;
 }
 h5{
     color: var(--main-color);
     margin: 0 0 2em 0;
     font-weight: 300;
 }
+.main .item p{
+    margin-bottom: 7px;
+}
 
 .footer {
-    background: var(--bg-color);
+    background: var(--bg-cards-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    text-align: center;
+    height: 80px;
     font-size: 1.3em;
     font-weight: 700;
+    border-top: 3px solid var(--main-color);
 }
 .footer a {
     color: var(--main-color);
@@ -114,7 +121,6 @@ h5{
 
 .github::after{
     content: url(img/github.svg);
-<<<<<<< HEAD
     position: absolute;
     right: 130px;
     top: 40%;
@@ -122,17 +128,25 @@ h5{
     opacity: 0.1;
 }
 
+.good-title h1{
+    padding-bottom: 10px;
+    color: var(--main-color);
+}
 .good{
-    background-color: rgb(195, 204, 231);
+    background-color: var(--bg-cards-color-alt);
 }
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
+    :root{
+        --padding-size: 10px 20px;
+    }
     .header h1 strong{
-        font-size: 1.3em;
+        font-size: 1.6em;
     }
-    .main{
-        padding: 0 20px 30px;
+}
+
+@media (max-width: 550px){
+    .header-svg{
+        display: none;
     }
-=======
->>>>>>> master
 }

@@ -5,16 +5,14 @@ const lightTheme = {
     "--text-color":     "#333",
     "--bg-color":       "#d7d7d7",
     "--bg-cards-color": "#f0f0f0",
-    "--main-font":      "'Roboto' , sans-serif",
-    "--padding-size":   "0 100px"
+    "--bg-cards-color-alt": "#3e75c344"
 }
 const darkTheme = {
     "--main-color":     "#e00",
     "--text-color":     "#eee",
     "--bg-color":       "#222",
     "--bg-cards-color": "#555",
-    "--main-font":      "'Roboto' , sans-serif",
-    "--padding-size":   "0 100px"
+    "--bg-cards-color-alt": "#c007"
 }
 
 for(let button of changeThemeButtons) {
