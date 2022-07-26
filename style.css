@@ -1,55 +1,94 @@
-body{
-    margin: 0;
-    font-family: 'Roboto' , sans-serif; 
+:root {
+    --main-color:         #3e75c3;
+    --text-color:         #333;
+    --bg-color:           #d7d7d7;
+    --bg-cards-color:     #f0f0f0;
+    --bg-cards-color-alt: #3e75c344;
+    --bg-footer-color:    #666;
+    --main-font:           'Roboto' , sans-serif;
+    --padding-size:        10px 100px;
 }
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--text-color); 
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--main-font);
+}
+
+.menu{
+    padding: 5px;
+    background-color: var(--bg-color);
+    border-bottom: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.title-theme p{
+    color: var(--main-color);
+    font-weight: 700;
+}
+.theme{
+    display: inline-block;
+}
+
 .header{
-    padding: 0 100px;
-    margin-bottom: 30px;
+    padding: var(--padding-size);
 }
 .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 300px;
-}
-.header h1{
-    margin: 0;
+    min-height: 300px;
 }
 .header h1 strong{
-    color: #3e75c3;
+    color: var(--main-color);
     font-size: 2em;
     text-transform: capitalize;
 }
-.header-img{
-    height: 90%;
+.header-svg{
+    max-height: 350px;
+}
+.svg-path{
+    fill: var(--main-color);
 }
 
 .main{
-    padding: 0 100px;
+    padding: var(--padding-size);
 }
 
 h2{
     font-size: 1.5em;
-    margin-bottom: 0;
 }
 h5{
-    color: #3e75c3;
+    color: var(--main-color);
     margin: 0 0 2em 0;
     font-weight: 300;
 }
+.main .item p{
+    margin-bottom: 7px;
+}
 
 .footer {
-    background: #d7d7d7;
+    background: var(--bg-cards-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    margin: 0;
+    text-align: center;
+    height: 80px;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 700;
+    border-top: 3px solid var(--main-color);
 }
 .footer a {
-    color: #3e75c3;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -57,27 +96,27 @@ h5{
     position: relative;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--bg-cards-color);
     padding: 1em 3em;
     overflow: hidden;
 }
 
-.command::after{
-    content: url(img/terminal.svg);
+.command::after,
+.git::after,
+.github::after {
     position: absolute;
     right: 130px;
-    top: 40%;
-    transform: scale(8);
+    top: 50%;
+    transform: scale(7);
     opacity: 0.1;
+}
+
+.command::after{
+    content: url(img/terminal.svg);
 }
 
 .git::after{
     content: url(img/git.svg);
-    position: absolute;
-    right: 130px;
-    top: 40%;
-    transform: scale(8);
-    opacity: 0.1;
 }
 
 .github::after{
@@ -87,4 +126,27 @@ h5{
     top: 40%;
     transform: scale(8);
     opacity: 0.1;
+}
+
+.good-title h1{
+    padding-bottom: 10px;
+    color: var(--main-color);
+}
+.good{
+    background-color: var(--bg-cards-color-alt);
+}
+
+@media (max-width: 1000px){
+    :root{
+        --padding-size: 10px 20px;
+    }
+    .header h1 strong{
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 550px){
+    .header-svg{
+        display: none;
+    }
 }

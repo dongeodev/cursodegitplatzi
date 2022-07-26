@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Curso Git</title>
 </head>
+
 <body>
+    <menu class="menu"> 
+        <div class="title-theme">
+            <h3>Tema:</h3>
+        </div>
+        <label class="theme">
+            <input type="radio" id="light" name="theme"> Claro
+        </label>
+        <label class="theme">
+            <input type="radio" id="dark" name="theme"> Oscuro
+        </label>
+    </menu>
+
     <header class="header">
         <div class="header-container">
             <h1>Guía del </br>
@@ -16,14 +30,17 @@
                 de <strong>git y gitHub</strong></br>
                 en Platzi
             </h1>
-            <img class="header-img" src="img/logo-banner.png" alt="logo GitHub">
+            <svg class="header-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <title>github</title>
+                <path class="svg-path" d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                </svg>
         </div>
     </header>
 
     <section class="main">
         <div class="item command">
-            <h2>Comandos utiles de la terminal</h2>
-            <h5>clase 11</h5>
+            <h2>Terminal</h2>
+            <h5>Comandos utiles</h5>
             <p><strong> cd :</strong> Moverse entre carpetas</p>
             <p><strong>mkdir :</strong> crear carpetas</p>
             <p><strong>ls :</strong> lista de archivos en una carpeta</p>
@@ -32,174 +49,192 @@
             <p><strong>rm -rf [Nombre-carpeta] :</strong> Borra carpeta</p>
             <p><strong>clear :</strong> limpia la terminal</p>
         </div>
-    
+
         <div class="item git">
-            <h2>Creando Repositorios</h2>
-            <h5>clase 12</h5>
-            <p> <strong>git init :</strong> nos crea un repositorio de manera local y lo hará en la carpeta donde estamos posicionados.</p>
-            <p> <strong>git init [nombre_de_la_carpeta] :</strong> crea la carpeta con ese nombre y dentro crea el repositorio.</p> 
+            <h2>Git init</h2>
+            <h5>Creando Repositorios</h5>
+            <p> <strong>git init :</strong> nos crea un repositorio de manera local y lo hará en la carpeta donde
+                estamos posicionados.</p>
+            <p> <strong>git init [nombre_de_la_carpeta] :</strong> crea la carpeta con ese nombre y dentro crea el
+                repositorio.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git add | rm | status (Agregando, quitando y viendo el estatus de archivos)</h2>
-            <h5>clase 13</h5>
-            <p><strong>git add [Nombre archivo]</strong> Agraga el archivo al staging</p>
-            <p><strong>git add -A</strong> Agraga todos los archivos pendientes al staging</p>
-            <p><strong>git status</strong> Para ver en que estado se encuentran los archivos</p>
+            <h2>Git add | rm | status</h2>
+            <h5>Agregando, quitando y viendo el estado de archivos</h5>
+            <p><strong>git add [Nombre archivo] :</strong> Agraga el archivo al staging</p>
+            <p><strong>git add -A ó git add . :</strong> Agraga todos los archivos pendientes al staging</p>
+            <p><strong>git status :</strong> Para ver en que estado se encuentran los archivos</p>
             <p><strong>git rm --cached :</strong>Nos devolvemos un paso</p>
             <p><strong>git rm -f [file] :</strong>Elimina el archivo por completo.</p>
             <p><strong>git add -n [file] : </strong>Que no haga nada</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git commit (Confirmando cambios)</h2>
-            <h5>clase 14</h5>
-            <p><strong>Git commit -m [“mensaje”] :</strong> Confirma cambios. Se recomienda ser descriptivo en el mensaje para tener trazabilidad</p>
-            <p><strong>Git commit -m [“mensaje”] -amend :</strong> agregar nuevos cambios al ultimo commit</p>
-            <p><strong>git log : </strong> Nos muestra la historia de todos los commits que hemos realizados.</p>
+            <h2>Git commit</h2>
+            <h5>Confirmando cambios</h5>
+            <p><strong>git commit -m [“mensaje”] :</strong> Confirma cambios. Se recomienda ser descriptivo en el
+                mensaje para tener trazabilidad</p>
+            <p><strong>git commit -am [“mensaje”] :</strong> Agrega los archivos del staging y confirma cambios. Se
+                recomienda ser descriptivo en el mensaje para tener trazabilidad</p>
+            <p><strong>git commit --amend :</strong> concatena nuevos cambios al ultimo commit y permite cambiar el
+                mensaje del commit</p>
+            <p><strong>git commit --amend --no-edit :</strong> concatena nuevos cambios al ultimo commit sin modificar
+                el mensaje del commit.</p>
+            <p><strong>git log :</strong> Nos muestra la historia de todos los commits que hemos realizados.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git tag (Etiquetando confirmaciones)</h2>
-            <h5>clase 15</h5>
-            <p><strong>git tag -a -m"":</strong> Nos permite agregar etiquetas a nuestros cambios. para agregar tag a otro commit se usa el SHA1</p>
-            <p><strong>git tag -l:</strong> Nos muestra la lista de etiquetas.</p>
-            <p><strong>git tag -f [SHA1]:</strong> Para renombrar. Se coloca el SHA1</p>
-            <p><strong>git tag -d :</strong> Para borar.</p>
+            <h2>Git tag</h2>
+            <h5>Etiquetando confirmaciones</h5>
+            <p><strong>git tag -a ["v X.XX"] -m ["mensaje"] :</strong> Nos permite agregar etiquetas a nuestros commits.
+            </p>
+            <p><strong>git tag -a ["v X.XX"] -m ["mensaje"] ["SHA1"] :</strong> Nos permite agregar etiquetas a un
+                commit en especifico usando el SHA1</p>
+            <p><strong>git tag -l :</strong> Nos muestra la lista de etiquetas.</p>
+            <p><strong>git tag -f [SHA1] :</strong> Para renombrar. Se coloca el SHA1</p>
+            <p><strong>git tag -d ["v X.XX"] :</strong> Borra un tag especifico.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git log (Revisando la historia de nuestro proyecto)</h2>
-            <h5>clase 16</h5>
+            <h2>Git log</h2>
+            <h5>Revisando la historia de nuestro proyecto</h5>
             <p><strong>git log :</strong> Muestra el historial de commit con fecha y autor</p>
             <p><strong>git log --oneline :</strong> Muestra un resumen de los commit</p>
             <p><strong>git log --oneline --graph :</strong> Muestra la grafica de commit con sus ramas</p>
-            <p><strong>git log -# :</strong> Muestra el numero especifico de commit que quieres ver</p>
+            <p><strong>git log -[#] :</strong> Muestra el numero especifico de commit que quieres ver</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git diff (Revisando los cambios entre versiones)</h2>
-            <h5>clase 17</h5>
+            <h2>Git diff</h2>
+            <h5>Revisando los cambios entre versiones</h5>
             <p><strong>git diff [SHA1V1] [SHA1V2]:</strong> Muestra la diferencia entre commit</p>
             <p><strong>git diff [tagV1] [tagV2]:</strong> tambien se pueden usar los tags</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git reset -- soft</h2>
-            <h5>clase 18</h5>
+            <h2>Git reset</h2>
+            <h5>Soft, Mixed y Hard</h5>
             <p><strong>git reset --soft [SHA1]:</strong> Desde que version borramos los commit</p>
-            <p><strong>Nota:</strong> Hay que tener en cuenta que si usas git reset --soft
-            Tienes 10 commits y borras el numero 7, los commits 8, 9 y 10 también se borran,
-            y tendras un nuevo commit que tomara el numero 8.</p>
-        </div>
-    
-        <div class="item git">
-            <h2>git reset -- mixed</h2>
-            <h5>clase 19</h5>
+            <p><strong>Nota:</strong> Hay que tener en cuenta que si tienes 10 commits y usas git reset --soft en el numero 7, los commits 8, 9 y 10 también se borran, y tendras un nuevo commit que tomara el numero 8.</p>
             <p><strong>git reset --mixed [SHA1]:</strong> Elimina los cambios, también del staging area.</p>
             <p><strong>Nota:</strong> La diferencia con git reset --soft es que esta deja los cambio en staging</p>
+            <p><strong>git reset --hard [SHA1]:</strong> Elimina los cambios por completo.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git reset --hard</h2>
-            <h5>clase 20</h5>
-            <p><strong>git reset --hard [SHA1]:</strong> Elimina los cambios por completo.</p>      
+            <h2>Git branch</h2>
+            <h5>Múltiples variantes del repositorio</h5>
+            <p><strong>git branch [nombre] :</strong> crea una rama </p>
+            <p><strong>git branch -d [nombre] :</strong> elimina una rama </p>
+            <p><strong>git branch -D [nombre] :</strong> fuerza la eliminacion de una rama </p>
+            <p><strong>git branch -m [nombre] [nombre nuevo] :</strong> Renombrar una rama</p>
+            <p><strong>git branch -l :</strong> Lista las ramas</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git branch (Múltiples variantes del repositorio)</h2>
-            <h5>clase 22</h5>
-            <p><strong>git branch [nombre]:</strong> crea una rama </p>
-            <p><strong>git branch -d-/D [nombre]</strong> elimina una rama </p>
-            <p><strong>git branch -m [nombre] [nombre nuevo]</strong> Renombrar </p>
-            <p><strong>git branch -l</strong> Lista de ramas</p>
+            <h2>Git checkout</h2>
+            <h5>Moverse entre ramas</h5>
+            <p><strong>git checkout [nombre_rama/SHA1] :</strong> Nos permite movernos entre ramas o commits, sirve para debugging </p>
+            <p><strong>git checkout -b [nombre_rama] :</strong> Crea una rama y se cambia a esa rama sin necesidad de usar git branch</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git branch (Múltiples variantes del repositorio)</h2>
-            <h5>clase 23</h5>
-            <p><strong>git checkout [nombre/sha1]:</strong>  Nos permite movernos entre ramas o commits, sirve para debugging </p>
-            <p><strong>git checkout -b [nombre_rama]: </strong> Crea una rama si se cambia a esa rama sin necesidad de usar git branch</p>
+            <h2>Git merge</h2>
+            <h5>Mezclando ramas</h5>
+            <p><strong>git merge [nombre_rama]:</strong> mezcla la rama seleccionada con la rama actual </p>
+            <p><strong>git merge [nombre_rama] --allow-unrelated-histories</strong> mezcla las ramas sin importar si la historia de las ramas no coinside</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git merge (Mezclando ramas y resolviendo conflictos)</h2>
-            <h5>clase 25</h5>
-            <p><strong>git merge [nombre_rama]:</strong>  mezcla la rama actual con la rama deseada </p>               
+            <h2>Git rebase</h2>
+            <h5>Reescribe la historia de tu proyecto</h5>
+            <p><strong>git rebase [nombre_rama]:</strong> Hace la mezcla de acuerdo al orden cronologico que se fueron creando </p>
+            <p>se recomienda no usar esto cuando se esta trabajando en equipo, es una mala practica. Usarlo solo de manera local</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git rebase (Reescribe la historia de tu proyecto)</h2>
-            <h5>clase 26</h5>
-            <p><strong>git rebase [nombre_rama]:</strong>  Hace la mezcla de acuerdo al orden cronologico que se fueron creando </p>
-            <p>se recomiendo no usar esto cuando se esta trabajando en equipo. Usarlo solo de manera local</p>              
-        </div>
-    
-        <div class="item git">
-            <h2>git stash (Guardando cambios temporalmente)</h2>
-            <h5>clase 27</h5>
-            <p><strong>git stash :</strong> Es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.</p>
+            <h2>Git stash</h2>
+            <h5>Guardando cambios temporalmente</h5>
+            <p><strong>git stash :</strong>Guarda los cambios actuales de manera temporal. Es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.</p>
             <p><strong>git stash list :</strong> Nos muestra la lista de stash que tengamos.</p>
-            <p><strong>git stash drop stash@[numero] :</strong> Nos permite borrar un stash.:</p>
-            <p><strong>git stash apply : </strong> Aplicamos el último cambio</p>
-            <p>se recomiendo no usar esto cuando se esta trabajando en equipo. Usarlo solo de manera local</p>              
+            <p><strong>git stash drop stash@{numero} :</strong> Nos permite borrar un stash.</p>
+            <p><strong>git stash clear :</strong> Elimina todos los stash</p>
+            <p><strong>git stash apply stash@{numero} :</strong> Aplica los cambios almacenados en un stash.</p>
+            <p><strong>git stash pop stash@{numero} :</strong> Aplica los cambios almacenados en un stash y elimina el stash.</p>
+            <p>se recomiendo no usar esto cuando se esta trabajando en equipo. Usarlo solo de manera local</p>
         </div>
-    
+
         <div class="item git">
-            <h2>Cherry pick eligiendo commits selectivamente</h2>
-            <h5>clase 28</h5>
+            <h2>Git cherry-pick</h2>
+            <h5>Eligiendo commits selectivamente</h5>
             <p><strong>git cherry-pick [SHA1] :</strong> Mueves un commit a una rama que desees</p>
-            <p>Cuando por algun motivo realizas un commit en una rama que no querias o lo quieres mover a otra rama.</p>              
+            <p>Es util cuando por algun motivo realizas un commit en una rama que no querias o lo quieres mover a otra rama.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>Cherry pick eligiendo commits selectivamente</h2>
-            <h5>clase 30</h5>
-            <p><strong>git clone [https/ssh]:</strong> Para clonar un repositorio en la pc. </p>               
+            <h2>Git clone</h2>
+            <h5>Clonando un repositorio existente</h5>
+            <p><strong>git clone [https/ssh]:</strong> Para clonar un repositorio en la pc.</p>
         </div>
-    
+
         <div class="item github">
-            <h2>Añadiendo una llave ssh a GitHub</h2>
-            <h5>clase 32</h5>
-            <p><strong>ssh-keygen -t rsa -b 4096 -C "Email de github"</strong> Crear llave </p>
-            <p><strong>cat ~/.ssh/id_rsa.pub</strong> Copiar la llave </p>
-            <p>Vas a tu perfil en github y copias la llave</p>              
+            <h2>Llaves SSH</h2>
+            <h5>Mejorar la seguridad en la conexion con GitHub</h5>
+            <p><strong>ssh-keygen -t rsa -b 4096 -C "Email_de_github" :</strong> Crea una llave SSH.</p>
+            <p><strong>cat ~/.ssh/id_rsa.pub :</strong> Muestra el archivo que contiene la llave SSH.</p>
+            <p>Copias la llave, Vas a tu perfil en github, entras en las configuraciones, en el apartado seguridad y pegas la llave SSH.</p>
         </div>
-    
+
         <div class="item git">
-            <h2>git remote (Añadiendo un repositorio remoto a uno local)</h2>
-            <h5>clase 33</h5>
-            <p><strong>git remote add [origin] [SSH/HTTPS] </strong> Conecta un repositorio con nuestro equipo local. </p>
-            <p><strong>git remote -v </strong> Lista las conexiones existentes.</p>
-            <p><strong>git remote remove [origin]  </strong> Elimina una conexión con algún repositorio.</p>               
+            <h2>Git remote</h2>
+            <h5>Conectar un repositorio remoto a uno local</h5>
+            <p><strong>git remote add [origin] [SSH/HTTPS] :</strong> Conecta un repositorio remoto con nuestro repositorio local.</p>
+            <p><strong>git remote set-url [origin] [SSH/HTTPS] :</strong> Cambia el apuntador al repositorio remoto.</p>
+            <p><strong>git remote -v :</strong> Lista las conexiones existentes.</p>
+            <p><strong>git remote remove [origin] :</strong> Elimina la conexión con un repositorio remoto.</p>
         </div>
-    
+
         <div class="item github">
-            <h2>git pull/fetch (Trayendo cambios desde el repositorio remoto)</h2>
-            <h5>clase 34</h5>
-            <p><strong>git fetch [repo] [rama]</strong> trae los archivos del repo remoto </p>
-            <p><strong>git merge [rama] --allow-unrelated-histories</strong> trae los archivos del repo remoto </p>
-            <p><strong>git pull [repo] [rama]</strong> Trae archivos del repo remoto y los mezcla con la rama que le indiquemos</p>                  
+            <h2>Git pull | fetch</h2>
+            <h5>Traer cambios desde el repositorio remoto</h5>
+            <p><strong>git fetch [rama_locaL] [rama_remota]</strong> trae los archivos del repositorio remoto </p>
+            <p><strong>git pull [rama_remota] [rama_local]</strong> Trae archivos del repositorio remoto y los mezcla con la rama que le indiquemos</p>
         </div>
-    
+
         <div class="item github">
-            <h2>git push (Enviando cambios al repositorio remoto)</h2>
-            <h5>clase 35</h5>
-            <p><strong>git push [repo] [rama]</strong> Envia los archivos al repo remoto </p>
-            <p><strong>git push [repo] --tags</strong> Envia los tags al repo remoto </p>
+            <h2>Git push</h2>
+            <h5>Enviar cambios al repositorio remoto</h5>
+            <p><strong>git push [rama_remota] [rama_local]</strong> Envia los archivos al repositorio remoto </p>
+            <p><strong>git push [rama_remota] --tags</strong> Envia los tags al repositorio remoto </p>
+            <p>Es una buena practica, siempre hacer primero un git pull, para verificar el estado de la rama remota y evitar confictos.</p>
         </div>
-    
-        <div class="item github">
-            <h2>.gitignore (Ignorando archivos no deseados)</h2>
-            <h5>clase 40</h5>
-            <p><strong>touch .gitignore</strong> Crea el archivo y agrega el nombre de archivo que no <p><strong>git push [repo] --tags</strong> Envia los tags al repo remoto </p>
+
+        <div class="good-title">
+            <h1>Buenas practicas usando Git y GitHub</h1>
         </div>
-    
+
+        <div class="item command good">
+            <h2>Agregar un archivo .gitignore</h2>
+            <h5>Ignorando archivos no deseados</h5>
+            <p><strong>touch .gitignore</strong> Crea el archivo .gitignore</p>
+            <p>Dentro del archivo agregas todos los nombres o tipos de archivos que no deseas hacerle seguimiento con git.</p>
+        </div>
+
+        <div class="item command good">
+            <h2>Agregar un archivo README.md</h2>
+            <h5>Dando una introduccion a nuestro Proyecto</h5>
+            <p><strong>touch README.md</strong> Crea el archivo README.md</p>
+            <p>Dentro del archivo agregas una introduccion a nuestro proyecto, podemos usar MARKDOWN para darle una buena presentacion visual al archivo.</p>
+        </div>
+
     </section>
 
     <footer class="footer">
         <p>Agradecimiento especial a <a href="https://platzi.com" target="_blank">Platzi</a> por mostrarnos el camino</p>
     </footer>
 
+    <script src="./script.js"></script>
 </body>
+
 </html>
